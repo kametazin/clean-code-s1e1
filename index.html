@@ -12,7 +12,7 @@
 <main>
     <p class="add-item"><label for="new-task" class="task__label new-task__label">Add Item</label>
       <div class="task__row-wrapper">
-        <input id="new-task" class="task__input" type="text">
+        <input id="new-task" class="task__input task__edit" type="text">
         <button class="button button__add">Add</button>
       </div>
     </p>
@@ -20,14 +20,14 @@
   <ul class="task incomplete-task">
     <li class="task__content">
       <input type="checkbox" class="input__checkbox">
-      <label class="task__label">Pay Bills</label>
-      <input type="text" class="task__input task-added__input">
+      <label class="task__label task__edit">Pay Bills</label>
+      <input type="text" class="task__input task-added__input task">
       <button class="button button__edit">Edit</button>
       <button class="button button__delete"><img src="./remove.svg" class="remove-icon"></button>
     </li>
     <li class="task__content task__li-edit"><input type="checkbox" class="input__checkbox">
-      <label class="task task__label-edit">Go Shopping</label>
-      <input type="text" value="Go Shopping" class="task__input task__input-edit">
+      <label class="task task__label-edit task__edit">Go Shopping</label>
+      <input type="text" value="Go Shopping" class="task__input task__input-edit task__edit">
       <button class="button button__save">Save</button>
       <button class="button button__delete">
         <img src="./remove.svg" class="remove-icon">
@@ -38,8 +38,8 @@
   <ul class="task complete-task">
     <li class="task__content">
       <input type="checkbox" checked class="input__checkbox">
-      <label class="task__label complete-task__label">See the Doctor</label>
-      <input type="text" class="task__input task-added__input">
+      <label class="task__label complete-task__label task__edit">See the Doctor</label>
+      <input type="text" class="task__input task-added__input task__edit">
       <button class="button button__edit">Edit</button>
       <button class="button button__delete">
         <img src="./remove.svg" class="remove-icon">

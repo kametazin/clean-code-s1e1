@@ -33,8 +33,7 @@ main {
     margin: 0 auto 0;
 }
 
-.task__label,
-.task__input {
+.task__edit {
     width: 56%;
     display: inline-block;
     flex-grow: 1;
