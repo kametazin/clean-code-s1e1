@@ -73,7 +73,7 @@ button {
 
 /* Heading */
 h3,
-label[for="new-task"] {
+.new-task__label {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -83,7 +83,7 @@ label[for="new-task"] {
     text-transform: uppercase;
 }
 
-input[type="text"] {
+.task__input {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -96,7 +96,7 @@ input[type="text"] {
     color: #888;
 }
 
-input[type="text"]:focus {
+.task__input:focus {
     color: #333;
 }
 
