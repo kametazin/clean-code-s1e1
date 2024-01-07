@@ -13,12 +13,13 @@ header {
 header img {
     width: 100%;
 }
-header .header__link {
+header, .header__link {
     font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-header { text-align: center;
+header { 
+    text-align: center;
 }
 }
 main {
@@ -39,10 +40,10 @@ main {
     padding: 0px;
 }
 .task__content {
-    list-style:none;
+    list-style: none;
 }
-input,button{
-    outline:none;
+input, button{
+    outline: none;
 }
 .button {
     background: none;
