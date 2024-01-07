@@ -16,7 +16,8 @@ header img {
     width: 100%;
 }
 
-header, .header__link {
+header,
+.header__link {
     font-family: fantasy, cursive;
 }
 
