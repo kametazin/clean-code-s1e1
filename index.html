@@ -19,17 +19,17 @@
   <h3>Todo</h3>
   <ul class="task incomplete-task">
     <li class="task__content">
-      <input type="checkbox">
+      <input type="checkbox" class="input__checkbox">
       <label class="task__label">Pay Bills</label>
-      <input type="text" class="task__input">
+      <input type="text" class="task__input task-added__input">
       <button class="button button__edit">Edit</button>
-      <button class="button button__delete"><img src="./remove.svg"></button>
+      <button class="button button__delete"><img src="./remove.svg" class="remove-icon"></button>
     </li>
-    <li  class="task__content"><input type="checkbox"><label class="task">Go Shopping</label>
-      <input type="text" value="Go Shopping" class="task">
+    <li class="task__content task__li-edit"><input type="checkbox"><label class="task task__label-edit">Go Shopping</label>
+      <input type="text" value="Go Shopping" class="task__input task__input-edit">
       <button class="button button__save">Save</button>
       <button class="button button__delete">
-        <img src="./remove.svg">
+        <img src="./remove.svg" class="remove-icon">
       </button>
     </li>
   </ul>
@@ -37,11 +37,11 @@
   <ul class="task complete-task">
     <li class="task__content">
       <input type="checkbox" checked>
-      <label class="task__label">See the Doctor</label>
-      <input type="text" class="task__input">
+      <label class="task__label complete-task__label">See the Doctor</label>
+      <input type="text" class="task__input task-added__input">
       <button class="button button__edit">Edit</button>
       <button class="button button__delete">
-        <img src="./remove.svg">
+        <img src="./remove.svg" class="remove-icon">
       </button>
     </li>
   </ul>
