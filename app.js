@@ -11,7 +11,7 @@ var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #inc
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
 //New task list item
-var createNewTaskElement=function(taskString){
+var createNewTaskElement=function(taskString) {
   var listItem = document.createElement("li");
   //input (checkbox)
   var checkBox = document.createElement("input");//checkbx
@@ -53,7 +53,7 @@ var createNewTaskElement=function(taskString){
 
 
 
-var addTask = function(){
+var addTask = function() {
   console.log("Add Task...");
   //Create a new list item with the text from the #new-task:
   if (!taskInput.value) return;
@@ -97,7 +97,7 @@ var editTask = function () {
 
 
 //Delete task.
-var deleteTask = function(){
+var deleteTask = function() {
   console.log("Delete Task...");
   var listItem = this.parentNode;
   var ul = listItem.parentNode;
@@ -118,7 +118,7 @@ var taskCompleted = function () {
 
 
 
-var taskIncomplete = function(){
+var taskIncomplete = function() {
   console.log("Incomplete Task...");
   //Mark task as incomplete.
   //When the checkbox is unchecked
@@ -130,7 +130,7 @@ var taskIncomplete = function(){
 
 
 
-var ajaxRequest = function(){
+var ajaxRequest = function() {
   console.log("AJAX Request");
 }
 //The glue to hold it all together.
@@ -156,13 +156,13 @@ var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
 
 //cycle over incompleteTaskHolder ul list items
 //for each list item
-for (var i = 0; i < incompleteTaskHolder.children.length; i++){
+for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
   //bind events to list items chldren(tasksCompleted)
   bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 }
 
 //cycle over completedTasksHolder ul list items
-for (var i = 0; i < completedTasksHolder.children.length; i++){
+for (var i = 0; i < completedTasksHolder.children.length; i++) {
   //bind events to list items chldren(tasksIncompleted)
   bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
