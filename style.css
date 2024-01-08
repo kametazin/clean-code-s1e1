@@ -94,6 +94,7 @@ h3,
     border-radius: 6px;
     font-family: Lato, sans-serif;
     color: #888;
+    width: 226px;
 }
 
 .task__input:focus {
@@ -128,10 +129,6 @@ li > label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
-    width: 226px;
-}
-
-.task__input {
     width: 226px;
 }
 
