@@ -26,11 +26,11 @@ var createNewTaskElement=function(taskString){
   var deleteButton=document.createElement("button");//delete button
   var deleteButtonImg=document.createElement("img");//delete button image
   label.innerText = taskString;
-  label.className = 'task__label task__edit';
-  label.style.display = 'inline-block';  // Ensure the label is initially visible
+  label.className = "task__label task__edit";
+  label.style.display = "inline-block";  // Ensure the label is initially visible
   editInput.type = "text";
   editInput.className = "task__input";
-  editInput.style.display = 'none';
+  editInput.style.display = "none";
   //Each elements, needs appending
   checkBox.type="checkbox";
   editInput.type="text";
@@ -40,7 +40,7 @@ var createNewTaskElement=function(taskString){
 
   deleteButton.className="button__delete button";
   deleteButtonImg.className="remove-icon"
-  deleteButtonImg.src='./remove.svg';
+  deleteButtonImg.src="./remove.svg";
   deleteButton.appendChild(deleteButtonImg);
   //and appending.
   listItem.appendChild(checkBox);
@@ -69,7 +69,7 @@ var addTask = function(){
 var editTask = function () {
   console.log("Edit Task...");
   var listItem = this.parentNode;
-  var editInput = listItem.querySelector('input[type=text]');
+  var editInput = listItem.querySelector("input[type=text]");
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".button__edit");
   var containsClass = listItem.classList.contains("task__li-edit");
@@ -77,14 +77,14 @@ var editTask = function () {
   if (containsClass) {
     // Switch to non-edit mode
     label.innerText = editInput.value;
-    editInput.style.display = 'none';
-    label.style.display = 'inline-block';
+    editInput.style.display = "none";
+    label.style.display = "inline-block";
     editBtn.innerText = "Edit";
     } else {
       // Switch to edit mode
       editInput.value = label.innerText;
-      editInput.style.display = 'inline-block';
-      label.style.display = 'none';
+      editInput.style.display = "inline-block";
+      label.style.display = "none";
       editBtn.innerText = "Save";
   }
 
@@ -167,6 +167,6 @@ for (var i = 0; i < completedTasksHolder.children.length; i++){
   bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
 
-// Issues with usability don't get seen until they are in front of a human tester.
+// Issues with usability don"t get seen until they are in front of a human tester.
 //prevent creation of empty tasks.
 //Change edit to save when you are in edit mode.
