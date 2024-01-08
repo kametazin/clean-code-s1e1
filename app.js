@@ -101,15 +101,17 @@ var deleteTask = function(){
 
 
 //Mark task completed
-var taskCompleted = function(){
+var taskCompleted = function () {
     console.log("Complete Task...");
 
-    //Append the task list item to the #completed-tasks
-    var listItem=this.parentNode;
+    // Append the task list item to the #completed-tasks
+    var listItem = this.parentNode;
     completedTasksHolder.appendChild(listItem);
-    bindTaskEvents(listItem, taskIncomplete);
 
-}
+    // Update the event binding for the moved task
+    bindTaskEvents(listItem, taskIncomplete);
+};
+
 
 
 var taskIncomplete = function(){
@@ -141,6 +143,7 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
 var checkBox = taskListItem.querySelector("input[type=checkbox]");
+checkBox.onchange = checkBoxEventHandler;
 var editButton = taskListItem.querySelector(".button__edit");
 var deleteButton = taskListItem.querySelector(".button__delete");
 
