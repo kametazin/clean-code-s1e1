@@ -27,11 +27,11 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText = taskString;
-    label.className = isEditMode ? 'task__label task__edit' : 'task__label';
+    label.className = 'task__label task__edit';
+    label.style.display = 'inline-block';  // Ensure the label is initially visible
     editInput.type = "text";
-    editInput.className = isEditMode ? "task__edit task__input" : "task__input";
-    editInput.style.display = isEditMode ? 'inline-block' : 'none';
-    label.style.display = isEditMode ? 'none' : 'inline-block';
+    editInput.className = "task__input";
+    editInput.style.display = 'none';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -148,6 +148,7 @@ var ajaxRequest = function(){
 addButton.onclick = addTask;
 addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
+
 
 
 var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
